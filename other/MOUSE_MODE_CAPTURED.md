@@ -1,4 +1,4 @@
-# MOUSE_MODE_CAPTURED ក្នុង Godot 4 🎮
+# MOUSE_MODE_CAPTURED
 
 **MOUSE_MODE_CAPTURED** គឺជាថេរ (constant) មួយក្នុង `Input` class របស់ Godot 4 ដែលប្រើសម្រាប់គ្រប់គ្រងស្ថានភាពកណ្តុរ (mouse)។
 
