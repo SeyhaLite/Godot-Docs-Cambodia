@@ -1,6 +1,6 @@
-# MOUSE_MODE_CAPTURED
+# MOUSE\_MODE\_CAPTURED
 
-**MOUSE_MODE_CAPTURED** គឺជាថេរ (constant) មួយក្នុង `Input` class របស់ Godot 4 ដែលប្រើសម្រាប់គ្រប់គ្រងស្ថានភាពកណ្តុរ (mouse)។
+**MOUSE\_MODE\_CAPTURED** គឺជាថេរ (constant) មួយក្នុង `Input` class របស់ Godot 4 ដែលប្រើសម្រាប់គ្រប់គ្រងស្ថានភាពកណ្តុរ (mouse)។
 
 ## 📋 និយមន័យ និងការប្រើប្រាស់
 
@@ -13,12 +13,13 @@ enum MouseMode:
     MOUSE_MODE_CONFINED_HIDDEN = 4  # កណ្តុរលាក់ និងមិនអាចចេញពីបង្អួចហ្គេម
 ```
 
-### 🔹 **MOUSE_MODE_CAPTURED = 2**
-- កណ្តុរនឹង **លាក់** មិនឃើញ [[19]]
-- ទីតាំងកណ្តុរនឹង **ជាប់នៅកណ្តាល** បង្អួចហ្គេម [[19]]
-- ល្អសម្រាប់ហ្គេម 3D ដែលត្រូវការមើលជុំវិញ (mouselook/camera control) [[1]]
+### 🔹 **MOUSE\_MODE\_CAPTURED = 2**
 
-> ⚠️ **ចំណាំសំខាន់៖** នៅពេលប្រើ `MOUSE_MODE_CAPTURED` ប្រសិនបើអ្នកចង់ដំណើរការចលនាកណ្តុរ អ្នកត្រូវប្រើ `InputEventMouseMotion.relative` ជំនួសឱ្យ `event.position` ព្រោះ `event.position` នឹងត្រឡប់មកកណ្តាលអេក្រង់ជានិច្ច។ [[2]]
+* កណ្តុរនឹង **លាក់** មិនឃើញ \[\[19]]
+* ទីតាំងកណ្តុរនឹង **ជាប់នៅកណ្តាល** បង្អួចហ្គេម \[\[19]]
+* ល្អសម្រាប់ហ្គេម 3D ដែលត្រូវការមើលជុំវិញ (mouselook/camera control) \[\[1]]
+
+> ⚠️ **ចំណាំសំខាន់៖** នៅពេលប្រើ `MOUSE_MODE_CAPTURED` ប្រសិនបើអ្នកចង់ដំណើរការចលនាកណ្តុរ អ្នកត្រូវប្រើ `InputEventMouseMotion.relative` ជំនួសឱ្យ `event.position` ព្រោះ `event.position` នឹងត្រឡប់មកកណ្តាលអេក្រង់ជានិច្ច។ \[\[2]]
 
 ## 💻 ឧទាហរណ៍កូដ
 
@@ -47,24 +48,21 @@ func _input(event):
 
 ## 🔗 តំណភ្ជាប់ឯកសារផ្លូវការ (Godot 4 - GitHub)
 
-1. **Class Input - MouseMode Enum** (GitHub raw):  
-   👉 https://raw.githubusercontent.com/godotengine/godot-docs/master/classes/class_input.rst  
-   *(ស្វែងរក `.. _class_Input_constant_MOUSE_MODE_CAPTURED:`)* [[19]]
-
-2. **Mouse Capture Tutorial - KidsCanCode (Godot 4 Recipes)**:  
-   👉 https://kidscancode.org/godot_recipes/4.x/input/mouse_capture/index.html [[1]]
-
-3. **Mouse and Input Coordinates - Official Docs**:  
-   👉 https://docs.godotengine.org/en/stable/tutorials/inputs/mouse_and_input_coordinates.html [[2]]
-
-4. **Input Class Reference - Godot 4.4**:  
-   👉 https://docs.godotengine.org/en/4.4/classes/class_input.html [[19]]
+1. **Class Input - MouseMode Enum** (GitHub raw):\
+   👉 https://raw.githubusercontent.com/godotengine/godot-docs/master/classes/class\_input.rst\
+   &#xNAN;_(ស្វែងរក `.. _class_Input_constant_MOUSE_MODE_CAPTURED:`)_ \[\[19]]
+2. **Mouse Capture Tutorial - KidsCanCode (Godot 4 Recipes)**:\
+   👉 https://kidscancode.org/godot\_recipes/4.x/input/mouse\_capture/index.html \[\[1]]
+3. **Mouse and Input Coordinates - Official Docs**:\
+   👉 https://docs.godotengine.org/en/stable/tutorials/inputs/mouse\_and\_input\_coordinates.html \[\[2]]
+4. **Input Class Reference - Godot 4.4**:\
+   👉 https://docs.godotengine.org/en/4.4/classes/class\_input.html \[\[19]]
 
 ## 🛠️ គន្លឹះបន្ថែម
 
-| បញ្ហា | ដំណោះស្រាយ |
-|--------|-------------|
-| កណ្តុរមិនចេញពីហ្គេមនៅពេលចុច ESC | ត្រូវប្តូរទៅ `MOUSE_MODE_VISIBLE` ជាមុនសិន |
-| ចង់ដឹងថាកណ្តុរកំពុងជាប់ឬអត់ | ប្រើ `if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:` |
-| ចលនាកណ្តុរមិនរលូន | ប្រើ `event.screen_relative` ជំនួស `event.relative` សម្រាប់ resolution ផ្សេងៗ [[2]] |
-| ហ្គេមនៅលើ Web មិនអាច capture កណ្តុរ | ត្រូវចុចលើហ្គេមជាមុនសិន (user gesture) ទើបអាច capture បាន |
+| បញ្ហា                               | ដំណោះស្រាយ                                                                            |
+| ----------------------------------- | ------------------------------------------------------------------------------------- |
+| កណ្តុរមិនចេញពីហ្គេមនៅពេលចុច ESC     | ត្រូវប្តូរទៅ `MOUSE_MODE_VISIBLE` ជាមុនសិន                                            |
+| ចង់ដឹងថាកណ្តុរកំពុងជាប់ឬអត់         | ប្រើ `if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:`                              |
+| ចលនាកណ្តុរមិនរលូន                   | ប្រើ `event.screen_relative` ជំនួស `event.relative` សម្រាប់ resolution ផ្សេងៗ \[\[2]] |
+| ហ្គេមនៅលើ Web មិនអាច capture កណ្តុរ | ត្រូវចុចលើហ្គេមជាមុនសិន (user gesture) ទើបអាច capture បាន                             |
